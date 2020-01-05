@@ -5,7 +5,7 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 05 Jan 2020 15:25:01 +0800</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
@@ -13,12 +13,11 @@
     </image>
     
     <item>
-      <title>How I started?</title>
-      <link>/post/2020-01-05/how-i-started/</link>
-      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/post/2020-01-05/how-i-started/</guid>
-      <description>&lt;p&gt;This is how I get started.&lt;/p&gt;
-&lt;p&gt;Referencing: &lt;a href=&#34;https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/&#34;&gt;https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/&lt;/a&gt;&lt;/p&gt;
+      <title>How I start to write my Hugo theme blog</title>
+      <link>/post/05jan2020/</link>
+      <pubDate>Sun, 05 Jan 2020 15:25:01 +0800</pubDate>
+      <guid>/post/05jan2020/</guid>
+      <description>&lt;p&gt;It is not as intimidating as I thought on blog creation using tools we use.&lt;/p&gt;
 </description>
     </item>
     
