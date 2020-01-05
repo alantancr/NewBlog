@@ -35,4 +35,6 @@ user_groups:
 - Visitors
 ---
 
-Self Intro
+Driven and focused tech professional with sales engineering and regional background at leading MNCs.
+Multi-skilled with both programming and engineering training, with aptitude in project management.
+Well-adapted to cross-cultural environments across sales and operations functions.
