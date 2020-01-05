@@ -103,36 +103,7 @@
 &lt;li&gt;
 &lt;p&gt;Github&lt;/p&gt;
 &lt;p&gt;Once you have created a Github account, create an empty repository&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-
-  &lt;a data-fancybox=&#34;&#34; href=&#34;image1.png&#34; data-caption=&#34;A caption&#34;&gt;
-&lt;img data-src=&#34;image1.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    A caption
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./image1.jpg&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Github&lt;/p&gt;

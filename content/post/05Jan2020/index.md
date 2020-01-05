@@ -59,11 +59,9 @@ I felt that it will be a way to jot down my experiences while creating this blog
 
    Once you have created a Github account, create an empty repository 
 
-   
+   ![png](./image1.jpg)
 
-   ```R
-   {{< figure src="image1.png" title="A caption" lightbox="true" >}}
-   ```
+   
 
    
 
