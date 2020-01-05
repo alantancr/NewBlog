@@ -17,7 +17,33 @@
       <link>/post/05jan2020/</link>
       <pubDate>Sun, 05 Jan 2020 15:25:01 +0800</pubDate>
       <guid>/post/05jan2020/</guid>
-      <description>&lt;p&gt;It is not as intimidating as I thought on blog creation using tools we use.&lt;/p&gt;
+      <description>&lt;h2 id=&#34;why-am-i-creating-this-post&#34;&gt;Why am I creating this post?&lt;/h2&gt;
+&lt;p&gt;I felt that it will be a way to jot down my experiences while creating this blog, this will allow me to share my thoughts. After  &amp;lsquo;googling&amp;rsquo;, it was not as intimidating as I thought. I was surprised that it was simpler than I thought.&lt;/p&gt;
+&lt;h3 id=&#34;setup-you-need-to-create-beforehand&#34;&gt;Setup you need to create beforehand&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; (It&#39;s free)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.netlify.com/&#34;&gt;Netlify&lt;/a&gt; (It&#39;s free)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/products/rstudio/&#34;&gt;RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;you-may-need-to-read-up-some-of-the-following&#34;&gt;You may need to read up some of the following&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Git&lt;/p&gt;
+&lt;p&gt;There are basics git commands that we need to know, learn more from &lt;a href=&#34;https://towardsdatascience.com/10-git-commands-that-will-get-you-started-right-now-94d814761919&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RBlogdown&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have referenced steps from &lt;a href=&#34;https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/&#34;&gt;here&lt;/a&gt; on how to use RStudio and RBlogdown to create this blog.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Github&lt;/p&gt;
+&lt;p&gt;Once you have created a Github account, create an empty repository &lt;img src=&#34;/../new-github-repo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     

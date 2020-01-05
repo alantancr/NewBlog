@@ -27,6 +27,36 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+typora-root-url: ../../../static/post/5-Jan-2020/new-github-repo.jpg
 ---
 
-It is not as intimidating as I thought on blog creation using tools we use. 
+## Why am I creating this post?
+
+I felt that it will be a way to jot down my experiences while creating this blog, this will allow me to share my thoughts. After  'googling', it was not as intimidating as I thought. I was surprised that it was simpler than I thought.
+
+### Setup you need to create beforehand
+
+- [Github](https://github.com/) (It's free)
+- [Netlify](https://www.netlify.com/) (It's free)
+- [R](https://www.r-project.org/)
+- [RStudio](https://www.rstudio.com/products/rstudio/)
+
+
+
+### You may need to read up some of the following
+
+- Git
+
+  There are basics git commands that we need to know, learn more from [here](https://towardsdatascience.com/10-git-commands-that-will-get-you-started-right-now-94d814761919)
+
+-  RBlogdown
+
+  I have referenced steps from [here](https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/) on how to use RStudio and RBlogdown to create this blog.
+
+
+
+1. Github
+
+   Once you have created a Github account, create an empty repository ![](/../new-github-repo.jpg)
+
+2. 
