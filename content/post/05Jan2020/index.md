@@ -55,18 +55,4 @@ I felt that it will be a way to jot down my experiences while creating this blog
 
 
 
-1. Github
-
-   Once you have created a Github account, create an empty repository 
-
-   ![png](./image1.jpg)
-
-   
-
-   
-
-1. Netlify
-
-1. RStudio
-
-   I have referenced this [journal](https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/) to create this blog.  Kudos Martin! He had made creating blog so simple.
+Kudos Martin! He had made creating blog using R so simple.  

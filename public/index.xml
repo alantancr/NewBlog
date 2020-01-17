@@ -99,20 +99,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I have referenced steps from &lt;a href=&#34;https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/&#34;&gt;here&lt;/a&gt; on how to use RStudio and RBlogdown to create this blog.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Github&lt;/p&gt;
-&lt;p&gt;Once you have created a Github account, create an empty repository&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./image1.jpg&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Netlify&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;RStudio&lt;/p&gt;
-&lt;p&gt;I have referenced this &lt;a href=&#34;https://www.storybench.org/how-to-build-a-website-with-blogdown-in-r/&#34;&gt;journal&lt;/a&gt; to create this blog.  Kudos Martin! He had made creating blog so simple.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Kudos Martin! He had made creating blog using R so simple.&lt;/p&gt;
 </description>
     </item>
     
