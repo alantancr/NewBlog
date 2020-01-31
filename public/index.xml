@@ -75,6 +75,30 @@
     </item>
     
     <item>
+      <title>Stylecloud, another means to create creative WordCloud</title>
+      <link>/post/01feb2020/</link>
+      <pubDate>Sat, 01 Feb 2020 06:11:01 +0800</pubDate>
+      <guid>/post/01feb2020/</guid>
+      <description>&lt;h1 id=&#34;learning-journey-at-ga&#34;&gt;Learning Journey at GA&lt;/h1&gt;
+&lt;p&gt;It was a hectic 6 weeks and time passed very quickly. There were so much to learn in my data science journey. So far, these were the topics covered:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Regression metholody&lt;/li&gt;
+&lt;li&gt;Classification metholody&lt;/li&gt;
+&lt;li&gt;Natural Language Processing&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the recent project, we were tasked to perform scrap subreddits and perform classification analysis. I have also learnt how to create interesting wordcloud through my research.&lt;/p&gt;
+&lt;p&gt;I have found &lt;a href=&#34;https://towardsdatascience.com/generate-modern-stylish-wordcloud-with-stylecloud-9cbb059696d2&#34;&gt;this interesting package&lt;/a&gt; which makes masking of wordcloud so simple. It makes visualisation so easy and cool.&lt;/p&gt;
+&lt;p&gt;After using stylecloud package:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/1feb/reddit.png&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/1feb/fitness.png&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/1feb/mentalhealth.png&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is original wordcloud :&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/1feb/mh.png&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/1feb/fit.png&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How I start to write my Hugo theme blog</title>
       <link>/post/05jan2020/</link>
       <pubDate>Sun, 05 Jan 2020 15:25:01 +0800</pubDate>
