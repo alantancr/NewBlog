@@ -35,8 +35,6 @@ user_groups:
 - Visitors
 ---
 
-**Data Enthusiast**
-
 *Keen to enhance business models with new insights*
 
 - Multi-skilled with both programming and regional sales engineering backgrounds 
