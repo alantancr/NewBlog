@@ -35,6 +35,10 @@ user_groups:
 - Visitors
 ---
 
-Driven and focused tech professional with sales engineering and regional background at leading MNCs.
-Multi-skilled with both programming and engineering training, with aptitude in project management.
-Well-adapted to cross-cultural environments across sales and operations functions.
+**Data Enthusiast**
+
+*Keen to enhance business models with new insights*
+
+- Multi-skilled with both programming and regional sales engineering backgrounds 
+- Aptitude in project management and translating business objectives into actionable goals 
+- Believes in leveraging the power of data to communicate and identify gaps and opportunities
