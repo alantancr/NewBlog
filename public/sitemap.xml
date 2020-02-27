@@ -33,6 +33,16 @@
   </url>
   
   <url>
+    <loc>/post/newtest/new/</loc>
+    <lastmod>2020-02-28T00:00:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-02-28T00:00:54+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/project/bookstore/</loc>
     <lastmod>2020-02-05T23:46:56+08:00</lastmod>
   </url>
@@ -50,11 +60,6 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2020-02-05T23:46:56+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-02-01T06:11:01+08:00</lastmod>
   </url>
   
   <url>
