@@ -5,21 +5,12 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 23 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2020 06:11:01 +0800</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
-    
-    <item>
-      <title>23Feb</title>
-      <link>/post/23feb/23feb/</link>
-      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/post/23feb/23feb/</guid>
-      <description>&lt;p&gt;Testing&lt;/p&gt;
-&lt;iframe src=&#34;https://kyso.io/alantancr/project1-analysis/embed#code=hidden&#34; width=&#34;100%&#34; height=&#34;52516px&#34; frameBorder=&#34;0&#34;&gt;&lt;/iframe&gt;</description>
-    </item>
     
     <item>
       <title>Stylecloud, another means to create creative WordCloud</title>
