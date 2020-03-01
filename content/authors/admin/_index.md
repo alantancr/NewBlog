@@ -14,7 +14,8 @@ education:
     year: 2013
 email: ""
 interests:
-- Artificial Intelligence
+- Machine Learning
+- Deployment
 - Data Visualisation
 
 name: Alan Tan
