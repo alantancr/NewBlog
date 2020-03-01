@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>routetodatascience</title>
+    <title>My Learning Journey</title>
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <description>routetodatascience</description>
+    <description>My Learning Journey</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>routetodatascience</title>
+      <title>My Learning Journey</title>
       <link>/</link>
     </image>
     
@@ -79,7 +79,13 @@
       <link>/post/29feb/29febpost/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       <guid>/post/29feb/29febpost/</guid>
-      <description>&lt;iframe src=&#34;https://kyso.io/alantancr/technical-analysisipynb/embed#code=hidden&#34; width=&#34;100%&#34; height=&#34;800px&#34; frameBorder=&#34;0&#34;&gt;&lt;/iframe&gt;
+      <description>&lt;p&gt;Time zoomed past so quickly. I am into the last two weeks of the GA program and capstone submission is round the corner.  While doing my research for capstone, I have learnt and discovered more stuff about Python, deployment and even AWS services.&lt;/p&gt;
+&lt;p&gt;After much research, I have discovered a way to render interactive charts on markdown on static site. There is another application, &lt;a href=&#34;https://kyso.io/&#34;&gt;Kyso.io&lt;/a&gt; for users to upload their data science journal (e.g. Jupyter notebooks). It allows you to hide your code and render charts as you want. Thereafter, you can embed this iFrame into the markdown which can be rendered into html.&lt;/p&gt;
+&lt;p&gt;COVID-19 is the hottest topic of the world. I really hope that the situation improves and the world resumes business as usual. May those who are infected recover and get well soon.&lt;/p&gt;
+&lt;p&gt;I have downloaded the dataset of  &lt;a href=&#34;https://www.kaggle.com/imdevskp/corona-virus-report&#34;&gt;COVID-19&lt;/a&gt; from Kaggle and plotted this interactive chart to try embedding interactive charts on my site.&lt;/p&gt;
+&lt;p&gt;In the below chart, I have plotted out the number of confirmed cases as of 27 February globally using Folium.Python Folium library has been a helpful resource for me to utilize the power of geospatial visual analysis. Geospatial data analysis provides another dimension in a single visualisation.&lt;/p&gt;
+&lt;p&gt;I shall share more about my capstone the next post&amp;hellip;&lt;/p&gt;
+&lt;iframe src=&#34;https://kyso.io/alantancr/technical-analysisipynb/embed#code=hidden&#34; width=&#34;100%&#34; height=&#34;400px&#34; frameBorder=&#34;0&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     
