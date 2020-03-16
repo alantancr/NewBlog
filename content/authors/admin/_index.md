@@ -3,9 +3,12 @@ authors:
 - admin
 education:
   courses:
-  - course: Data Science Immersive 12 
+  - course: Data Science Immersive 12 Graduate
     institution: General Assembly
-    year: Current
+    year: 2020
+  - course: Certified Data Analytics (R) Specialist  
+    institution: Singapore Management University Academy
+    year: 2019  
   - course: Graduate Diploma in Systems Analysis
     institution: National University of Singapore
     year: 2019
