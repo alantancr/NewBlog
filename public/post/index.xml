@@ -5,12 +5,23 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 29 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Graduation!!!</title>
+      <link>/post/20mar/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/20mar/</guid>
+      <description>&lt;h1 id=&#34;beginning-of-a-new-journey&#34;&gt;Beginning of a new journey&lt;/h1&gt;
+&lt;p&gt;This 12 weeks zoomed past so quickly. It is a beginning of a new journey. I shall take this opportunity to thank the teaching team and classmates/friends of DSI12 for this wonderful journey. I shall write a post about my capstone project in another post.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/20mar/classphoto.jpg&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Folium and Kyso</title>
