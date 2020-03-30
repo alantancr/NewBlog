@@ -31,11 +31,11 @@ projects: []
 
 # Hotel Pal: A Content-based recommender
 
-I will be sharing my thoughts  about the project, challenges I have faced and after thoughts of the projects. 
+I will be sharing my thoughts  about the project, challenges I have faced and after thoughts of the project. 
 
 ## Objective
 
-As part of the capstone project of GA curriculum, I built a end-to-end content based recommender engine, deployment on Heroku via Flask. The objective is to transform implicit information provided by users into explicit features for hotel recommendation system engine. There are two parts to this recommender engine using hotel attributes and reviews by users respectively to build two separate recommendation engine. 
+As part of GA curriculum, I built a end-to-end content based recommender engine, deployment on Heroku via Flask. The objective is to transform implicit information provided by users into explicit features for hotel recommendation system engine. There are two parts to this recommender engine using hotel attributes and reviews by users respectively to build two separate recommendation engine. 
 
 
 
@@ -65,11 +65,11 @@ Details can be found on my github [repo](https://github.com/alantancr/Hotel-Reco
 
 ## My thought process
 
-I would like to share my experience in terms of this whole process of capstone. As a beginner in data science projects, the first challenge I have faced was selecting the right topic to work on and what is the end goal of the project.  
+I would like to share my experience in terms of the  process of this capstone. As a beginner in data science project, the first challenge I have faced was selecting the appropriate topic to work on and capturing the end goal of the project.  
 
 1. Being objective and selecting a digestible topic within timeline
 
-   With given about 4-5 weeks timeline and also there were classes to attend in the day, I took consideration of choosing a topic which I could complete on time.  Since I was always interested about how Netflix throws us recomendations of movies/shows we might like, I zoomed into looking at recommender systems. The recommender was introduced as part of unsupervised machine learning techniques. These allows me time to read up and do my research on building recommender engine.
+   With given about 4-5 weeks timeline, I took consideration of choosing a topic which I could complete on time.  Since I was always interested about how Netflix throws us recomendations of movies/shows we might like, I zoomed into looking at recommender systems. The recommender was introduced as part of unsupervised machine learning techniques in the course around week 7-8, so I have sufficient time to read up and do my research on building recommender engine. It took me around 2-3 weeks to settle in on a topic which I want to work on and how my project demostration will look like. The  difficult part is to conceptualise how the demostration will look like, what information to use and illustrate on.
 
    
 
@@ -79,9 +79,9 @@ I would like to share my experience in terms of this whole process of capstone. 
 
    
 
-3. Technical perspect of this project
+3. Technical perspect of the project
 
-   One of the key issues which I faced initially when I was writing the code to compile a sparse matrix and tabulating a cosine-similar matrix was computation power. My current MacBook has only 8gb Ram and some codes takes a bit of computation power. I explored Google Colab and Sagemaker, and as recommended by TA, AWS Sagemaker is so much efficient and easy to use. It has exactly the same user interface as jupyter notebook. Moreover, the better computation specifications is not really costly as  long as you remember to turn off the instance after usage.
+   One of the key issues which I faced initially when I was writing the code to compile a sparse matrix and tabulating a cosine-similar matrix was computation power. My current MacBook has only 8gb Ram and some codes takes a bit of computation power. I explored Google Colab and Sagemaker, and as recommended by TA, AWS Sagemaker is so much efficient and easy to use. It has exactly the same user interface as jupyter notebook. Moreover, the better computation specifications is not really costly as  long as you remember to turn off the instance after usage.  3-4 hours of a ml.t2.2xlarge (32gb ram) cost me about 3-4 USD. 
 
    
 
@@ -89,9 +89,9 @@ I would like to share my experience in terms of this whole process of capstone. 
 
    
 
-   # Conclusion
+   # Looking back
 
-   Looking back, this journey was really interesting. I learnt to look at problems in a different perspective and building an end-to end solution needs to go through a lot more thought process.
+   This journey was really interesting. I learnt to look at problems in a different perspective and building an end-to end solution needs to go through a lot more thought process. I tried different technology and see how it work or did not work for me.
 
    
 
