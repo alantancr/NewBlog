@@ -31,7 +31,7 @@ projects: []
 
 # Hotel Pal: A Content-based recommender
 
-I will be sharing my thoughts  about the project, challenges I have faced and after thoughts of the project. 
+I will be sharing my thoughts about the project, challenges I have faced and after thoughts of the project. 
 
 ## Objective
 
