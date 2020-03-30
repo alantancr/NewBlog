@@ -1,21 +1,21 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "BookStore"
+title: "Hotel Pal: Content-Based Hotel Recommender"
 summary: ""
 authors: []
-tags: ['Software Engineering']
+tags: ['Data Science']
 categories: []
 date: 2020-02-05T23:46:56+08:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://github.com/alantancr/GDipSA-Bookstore"
+external_link: "https://github.com/alantancr/Hotel-Recommender"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Photo by 🇸🇮 Janko Ferlič on Unsplash"
+  caption: ""
   focal_point: "Center"
   preview_only: false
 

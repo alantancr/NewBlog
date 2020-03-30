@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | My Learning Journey</title>
-    <link>/project/</link>
-      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Data Science | My Learning Journey</title>
+    <link>/tags/data-science/</link>
+      <atom:link href="/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Science</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Feb 2020 23:46:56 +0800</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Projects</title>
-      <link>/project/</link>
+      <title>Data Science</title>
+      <link>/tags/data-science/</link>
     </image>
-    
-    <item>
-      <title>BookStore</title>
-      <link>/project/bookstore/</link>
-      <pubDate>Wed, 05 Feb 2020 23:46:56 +0800</pubDate>
-      <guid>/project/bookstore/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Hotel Pal: Content-Based Hotel Recommender</title>
