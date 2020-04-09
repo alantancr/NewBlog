@@ -75,6 +75,106 @@
     </item>
     
     <item>
+      <title>Accessing MongoDb with Pymongo</title>
+      <link>/post/9apr/</link>
+      <pubDate>Thu, 09 Apr 2020 10:27:05 +0800</pubDate>
+      <guid>/post/9apr/</guid>
+      <description>&lt;h1 id=&#34;accessing-mongodb-with-pymongo&#34;&gt;Accessing MongoDb with Pymongo&lt;/h1&gt;
+&lt;p&gt;In the midst of looking for a job in such situation, I took some time to pick up new knowledge which I think it&#39;s useful. One of them is &lt;strong&gt;MongoDB&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So what is MongoDB&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;MongoDB is a document-oriented NoSQL database used for high volume data storage. MongoDB is a database which came into light around the mid-2000s. It falls under the category of a NoSQL database. Traditional RDBMS uses SQL syntax to store and retrieve data for further insights. Instead, a NoSQL database system encompasses a wide range of database technologies that can store structured, semi-structured, unstructured and polymorphic data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is NoSQL?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NoSQL is a non-relational database that does not require a fixed schema,avoid joins and is easy to scale. NoSQL database stands for &amp;ldquo;Not Only SQL&amp;rdquo; or &amp;ldquo;Not SQL.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why NoSQL?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Structured SQL is difficult to scale as database grows. Unstructured databases do not need to follow predefined format.&lt;/p&gt;
+&lt;p&gt;There are several ways of installing MongoDB on the machine.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I have chose to install them using HomeBrew and largely uses Command Line to interact with MongoDB. There are some things you may need to watch out like Os version of your Mac. You may wish to follow this installation guide. This guide makes it easy to understand and follow like &lt;a href=&#34;https://zellwk.com/blog/local-mongodb/&#34;&gt;creating a connection on local machine&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;There is also another way which is to install MongoDB Compass on the local machine. You may wish to follow this &lt;a href=&#34;https://docs.mongodb.com/compass/master/install/&#34;&gt;guide&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;python-with-mongodb&#34;&gt;Python with MongoDB&lt;/h2&gt;
+&lt;p&gt;In python, in order to connect to MongoDB, we will need a package call PyMongo. Assuming installation are done correctly, now we will move on to Python to connect to our database. MongoDB works in the key value pair metholody.&lt;/p&gt;
+&lt;p&gt;Below snippet is the basic of connecting to the database. The package &amp;ldquo;pprint&amp;rdquo; is called pretty printer which allows user to print data in a more readable way.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pymongo 
+import pprint
+mongo_uri = &amp;quot;mongodb://localhost:27017/&amp;quot;  
+client = pymongo.MongoClient(mongo_uri)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To see available databases:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;client.list_database_names()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Creating Database and collection&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It is simple to create a database and a collection in python with the following syntax.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mydb=client[&#39;sample&#39;]
+mytable=mydb[&#39;table&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, this database and collection will not be shown if we run list_database_names() module. This is because MongoDB does not show any empty databases. We will need to insert arbitrary data into the collection.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;testInsert=mytable.insert_one({&amp;quot;country&amp;quot;:&#39;India&#39;}).inserted_id
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can also use pandas to load a csv and transform into MongoDB.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df=pd.read_csv(&#39;sampleMongoData.csv&#39;) 
+#create empty array
+listofDocs=[]
+for i in df.index:
+    listofDocs.append(dict(df.iloc[i]))
+
+myfinal = mytable.insert_many(listofDocs)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Reading from MongoDB and transfer to a dataframe&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# transfering to dataframe
+sample=table.find()
+df=pd.DataFrame(sample)
+df.head()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Inserting mutliple observations into MongoDB&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mport datetime
+new_posts = [{&amp;quot;name&amp;quot;: &amp;quot;newMike&amp;quot;,
+            &amp;quot;username&amp;quot;: &amp;quot;latestpost!&amp;quot;,
+            &amp;quot;date&amp;quot;: datetime.datetime(2009, 11, 12, 11, 14)},
+            {&amp;quot;name&amp;quot;: &amp;quot;Eliot&amp;quot;,
+            &amp;quot;title&amp;quot;: &amp;quot;onceAgain&amp;quot;,
+            &amp;quot;text&amp;quot;: &amp;quot;and pretty easy too!&amp;quot;,
+            &amp;quot;date&amp;quot;: datetime.datetime(2009, 11, 10, 10, 45)}]
+
+final = mytable.insert_many(new_posts)
+
+final.inserted_ids
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Upon successful data entry, this will be shown.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[ObjectId(&#39;5e8c2ebc6057435b48b52886&#39;), ObjectId(&#39;5e8c2ebc6057435b48b52887&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Filtering entry&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In order to filter an entry of document, you will need to use find_one method&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mytable.find_one({&amp;quot;name&amp;quot;:&#39;Same&#39;})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Delete entry&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To delete entry, you will just need to use delete_one method&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mytable.delete_one({&#39;name&#39;:&#39;Mike&#39;})
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Update entry&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To update entry, you will to use the update_one method&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;myquery = { &amp;quot;address&amp;quot;: &amp;quot;Valley 345&amp;quot; }
+newvalues = { &amp;quot;$set&amp;quot;: { &amp;quot;address&amp;quot;: &amp;quot;Canyon 123&amp;quot; } }
+
+mytable.update_one(myquery, newvalues)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I hope the resources and this post willl be able to show you the basics of MongoDB and how you can try to integrate Python with MongoDB.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.analyticsvidhya.com/blog/2020/02/mongodb-in-python-tutorial-for-beginners-using-pymongo/&#34;&gt;https://www.analyticsvidhya.com/blog/2020/02/mongodb-in-python-tutorial-for-beginners-using-pymongo/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.guru99.com/create-read-update-operations-mongodb.html&#34;&gt;https://www.guru99.com/create-read-update-operations-mongodb.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zellwk.com/blog/install-mongodb/&#34;&gt;https://zellwk.com/blog/install-mongodb/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Capstone Project</title>
       <link>/post/30mar/</link>
       <pubDate>Mon, 30 Mar 2020 10:23:06 +0800</pubDate>
