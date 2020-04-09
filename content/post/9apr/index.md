@@ -57,7 +57,7 @@ There are several ways of installing MongoDB on the machine.
 
 ## Python with MongoDB
 
-In python, in order to connect to MongoDB, we will need a package call PyMongo. Assuming installation are done correctly, now we will move on to Python to connect to our database. MongoDB works in the key value pair metholody.
+In python, in order to connect to MongoDB, we will need a package call PyMongo. Assuming installation is done correctly, now we will move on to Python to connect to our database. MongoDB works in the key value pair metholody.
 
 Below snippet is the basic of connecting to the database. The package "pprint" is called pretty printer which allows user to print data in a more readable way.
 
