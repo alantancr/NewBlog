@@ -30,8 +30,6 @@ projects: []
 
 ---
 
-# 	Accessing MongoDb with Pymongo
-
 In the midst of looking for a job in such situation, I took some time to pick up new knowledge which I think it's useful. One of them is **MongoDB**.
 
 **So what is MongoDB**? 

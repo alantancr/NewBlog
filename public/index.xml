@@ -75,12 +75,113 @@
     </item>
     
     <item>
+      <title>Python with Excel Workbook</title>
+      <link>/post/3may/</link>
+      <pubDate>Sun, 03 May 2020 16:07:41 +0800</pubDate>
+      <guid>/post/3may/</guid>
+      <description>&lt;p&gt;It&#39;s been hectic past one month, with circuit breaker , technical assessment and interviews. I would say I have learnt something in each assessment although some of them are really tough. In this post, I will be sharing on working on Python and Excel.&lt;/p&gt;
+&lt;p&gt;Pandas has integrated the capability of reading Excel file is really convenient to use. One of the assessment which I have done requires me to perform EDA on Excel file and create charts report in Excel.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#read excel file
+df_policy = pd.read_excel(&#39;PREMIUM_POLICY_DATA.xlsb&#39;,sheet_name=&#39;POLICY&#39;, engine=&#39;pyxlsb&#39;)
+df_premium = pd.read_excel(&#39;PREMIUM_POLICY_DATA.xlsb&#39;,sheet_name=&#39;PREMIUM&#39;, engine=&#39;pyxlsb&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Engine pyxlsb is used to support for binary Excel files. It was released in on the &lt;code&gt;1.0.0&lt;/code&gt; release of pandas.&lt;/p&gt;
+&lt;p&gt;In this exercise, I created a plot and pin in one worksheet and copy the output data into another sheet. Here is a sample visualisation that I have appended and below is a function I have wrote to append this chart into the sheet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/3May/download.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Steps to create a excelwork and worksheet and append image&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Import these libraries&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Import io&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;import xlsxwriter&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;from openpyxl import load_workbook&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will need to use package xlsxwriter to create a workbook. Create the worksheets which are required.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instantiate an io for image data&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a function/ run seperate codeline to create a plot and append the position you need&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Close the workbook to save the image&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;#creating a workbook excel file
+workbook = xlsxwriter.Workbook(&#39;report.xlsx&#39;)
+wks2=workbook.add_worksheet(&#39;report_chart&#39;)
+#wks1=workbook.add_worksheet(&#39;Overview_chart&#39;)
+
+
+#create io for image data for inserting charts
+imgdata=io.BytesIO()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# function to load dataframe, plot, insert imagedata io into excel with position
+def plot_m(df,imagedata,wk,a,b,title):
+  	#matplotlib
+    df.plot(kind=&#39;bar&#39;,x=&amp;quot;MonthName&amp;quot;)
+    plt.legend()
+    plt.xticks(rotation=0)
+    plt.xlabel(&amp;quot;Month&amp;quot;)
+    plt.ylabel(&amp;quot;GWP($)&amp;quot;)
+    #set title
+    plt.title(title)
+    #set currentfigure size
+    plt.gcf().set_size_inches(8, 7)
+    #save image
+    plt.savefig(imagedata, format=&#39;png&#39;)
+    #insert image into workbook
+    #a and b refers to position of the image in the worksheet
+    wk.insert_image(a,b, &#39;&#39;, {&#39;image_data&#39;: imagedata})
+   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In order to save the workbook images, you will need to remember to close the workbook.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# close workbook to save the files
+workbook.close()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Steps to append data into workbook&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Load the workbook&lt;/li&gt;
+&lt;li&gt;Use pandas function to insert dataframe into worksheet&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#load workbook to save the data into other worksheets
+book = load_workbook(&#39;report.xlsx&#39;)
+writer = pd.ExcelWriter(&#39;report.xlsx&#39;, engine=&#39;openpyxl&#39;)
+writer.book = book
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I have perform a try-except if the data is empty dataframe, I will pass to prevent throwing error if the dataframe is empty.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;try: 
+  # writing the dataframe into excel and naming the worksheet &amp;quot;GWP_booking_thisyr&amp;quot;
+    booked_ty_plt.to_excel(writer, &amp;quot;GWP_booking_thisyr&amp;quot;)
+except:
+    pass
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Last but not least remember to save the written data&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;writer.save()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After this assessment, I understood that Python and Excel can work hand-in-hand and we could  be generating reports automatically with Python scripts like this. Anyway, there is more requirement needed for the technical assessment, I would share the second half of the assessment in another post.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Accessing MongoDb with Pymongo</title>
       <link>/post/9apr/</link>
       <pubDate>Thu, 09 Apr 2020 10:27:05 +0800</pubDate>
       <guid>/post/9apr/</guid>
-      <description>&lt;h1 id=&#34;accessing-mongodb-with-pymongo&#34;&gt;Accessing MongoDb with Pymongo&lt;/h1&gt;
-&lt;p&gt;In the midst of looking for a job in such situation, I took some time to pick up new knowledge which I think it&#39;s useful. One of them is &lt;strong&gt;MongoDB&lt;/strong&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;In the midst of looking for a job in such situation, I took some time to pick up new knowledge which I think it&#39;s useful. One of them is &lt;strong&gt;MongoDB&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;So what is MongoDB&lt;/strong&gt;?&lt;/p&gt;
 &lt;p&gt;MongoDB is a document-oriented NoSQL database used for high volume data storage. MongoDB is a database which came into light around the mid-2000s. It falls under the category of a NoSQL database. Traditional RDBMS uses SQL syntax to store and retrieve data for further insights. Instead, a NoSQL database system encompasses a wide range of database technologies that can store structured, semi-structured, unstructured and polymorphic data.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;What is NoSQL?&lt;/strong&gt;&lt;/p&gt;
