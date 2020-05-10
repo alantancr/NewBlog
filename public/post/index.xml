@@ -5,12 +5,48 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 03 May 2020 16:07:41 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 18:12:15 +0800</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Automating Reports</title>
+      <link>/post/10may/</link>
+      <pubDate>Sun, 10 May 2020 18:12:15 +0800</pubDate>
+      <guid>/post/10may/</guid>
+      <description>&lt;p&gt;As I was sharing on the previous post about automating report, I have done some researched on automation. There are few methods to achieve this, we can use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Airflow&lt;/li&gt;
+&lt;li&gt;Cron&lt;/li&gt;
+&lt;li&gt;Window Scheduler for Windows Users&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In my submission, I have wrote a bash script which includes the dependicies (requirements.txt) and follow by my python script.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-nano&#34;&gt;#!/bin/bash
+requirements.txt
+script.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Click &lt;a href=&#34;https://www.hastac.org/blogs/joe-cutajar/2015/04/21/how-make-simple-bash-script-mac&#34;&gt;here&lt;/a&gt; if you wish to refer for some basic bash script guide.&lt;/p&gt;
+&lt;p&gt;I have assumed in the scenario of using a virtual machine on linux. The scenario given was to automate the report every month end. Using Crontab, it is scheduled to run the script and check if the next day is 01, this is especially critical because we have February which has a lesser number of days.&lt;/p&gt;
+&lt;p&gt;Below is the vi script save in crontab:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-nano&#34;&gt;# For details see man 4 crontabs
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-nano&#34;&gt; 50 23 28-31 * * [ &amp;quot;$(date +%d -d tomorrow)&amp;quot; = &amp;quot;01&amp;quot; ] &amp;amp;&amp;amp; {path of script}/bashscript
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Airflow maybe a better option as it provides the power of scheduling the analytics workflow and Data warehouse also managed under a single roof so that a comprehensive view accessed to check the status.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Python with Excel Workbook</title>
