@@ -5,12 +5,98 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 10 May 2020 18:12:15 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 11 Jun 2020 15:53:06 +0800</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Docker and deploying on Heroku</title>
+      <link>/post/11jun/</link>
+      <pubDate>Thu, 11 Jun 2020 15:53:06 +0800</pubDate>
+      <guid>/post/11jun/</guid>
+      <description>&lt;p&gt;What is Docker and why it is used?&lt;/p&gt;
+&lt;p&gt;Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docker-demo-app.herokuapp.com/&#34;&gt;Here&#39;s&lt;/a&gt; a simple Docker app which runs on Flask and deployed on Heroku.&lt;/p&gt;
+&lt;p&gt;In the file directory, these are the few files which you required to have them.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;app.py (where your code should be written)&lt;/li&gt;
+&lt;li&gt;Dockerfile (Docker builds images automatically by reading the instructions from a &lt;code&gt;Dockerfile&lt;/code&gt; &amp;ndash; a text file that contains all commands, in order, needed to build a given image. A &lt;code&gt;Dockerfile&lt;/code&gt; refers to a specific format and set of instructions.)&lt;/li&gt;
+&lt;li&gt;requirements.txt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;First&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;As a demonstration purpose, my Flask app returns me when I run app.py on localhost.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello, this is a test for Docker image hosting on Heroku.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Second&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;In your virtual environment, freeze the dependencies into requirements.txt&lt;/p&gt;
+&lt;p&gt;Run this in cmd:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip freeze &amp;gt; requirements.txt
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since this app is relatively simple, there are only two dependencies that you should need which are mainly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;gunicorn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Third&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;The third file is the Dockerfile. There are a set of rules in writing Dockerfile, refer &lt;a href=&#34;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To generate a Dockerfile, in the working directory on command terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;touch Dockerfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once Dockerfile is created, edit the content in Dockerfile with vi or you can use Nano editor.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;vi Dockerfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In vi, edit the file and save the content. In this instance, I have choosen a python environment:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FROM python:3.7.3-slim
+
+COPY requirements.txt /
+RUN pip3 install -r /requirements.txt
+
+COPY . /app
+WORKDIR /app
+
+CMD gunicorn app:app --bind 0.0.0.0:$PORT --reload
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Do remember to save this Dockerfile in vi editor.&lt;/p&gt;
+&lt;p&gt;Now we are ready to build our Docker image, perform these commands on terminal:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Build the image with &lt;code&gt;docker build -t your-app-name .&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the container with &lt;code&gt;docker run -d -p 5000:5000 -e PORT=5000 --name your-app-server-name your-app-name&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check whether the container is running&lt;/li&gt;
+&lt;li&gt;Go to &lt;code&gt;localhost:5000&lt;/code&gt;. You should see  &lt;code&gt;Hello, this is a test for Docker image hosting on Heroku.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Deployment&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Heroku supports container deployment and below are the steps to deploy it on Heroku.&lt;/p&gt;
+&lt;p&gt;Perform these on terminal:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Login to Heroku container. It would open the browser and prompt you to login with your Heroku credentials if you are not logged in already. If you are logged in, you will see &amp;ldquo;Login Succeeded&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;heroku container:login&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Creating the application name on Heroku. Make sure you have the 3 files in the same folder.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;heroku create your-app-name&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Creating the Heroku container on the app&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;heroku container:push web --app your-app-name&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Releasing the container on app&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;heroku container:release web --app your-app-name&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open your application, You should see &lt;code&gt;Hello, this is a test for Docker image hosting on Heroku.&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/alantancr/docker-demo&#34;&gt;Here&lt;/a&gt; is the demo code.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/11June/dockerimage.png&#34; alt=&#34;alternative text for search engines&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Automating Reports</title>
