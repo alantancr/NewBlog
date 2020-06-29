@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Tableau Free E-learning"
+title: Tableau Free E-learning
 subtitle: ""
 summary: ""
 authors: []
 tags: []
 categories: []
-date: 2020-06-29T16:52:08+08:00
-lastmod: 2020-06-29T16:52:08+08:00
+date: 2020-06-29T17:12:25+08:00
+lastmod: 2020-06-29T17:12:25+08:00
 featured: false
 draft: false
 
@@ -40,6 +40,3 @@ https://www.youracclaim.com/badges/e66761b9-73b8-49c0-86c9-52c9befce8e8/public_u
 
 ![tableau-data-scientist](/post/29june/tableau-analyst.png)
 https://www.youracclaim.com/badges/d2ad3152-a759-46ad-a0ce-856f1e50d05a/public_url
-
-
-

@@ -5,7 +5,7 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 29 Jun 2020 16:52:08 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 29 Jun 2020 17:12:25 +0800</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
@@ -14,9 +14,9 @@
     
     <item>
       <title>Tableau Free E-learning</title>
-      <link>/post/29june/</link>
-      <pubDate>Mon, 29 Jun 2020 16:52:08 +0800</pubDate>
-      <guid>/post/29june/</guid>
+      <link>/post/june29/</link>
+      <pubDate>Mon, 29 Jun 2020 17:12:25 +0800</pubDate>
+      <guid>/post/june29/</guid>
       <description>&lt;p&gt;I have successfully completed Tableau E-Learning for Data Scientist and Analyst. Through this program, I have gained more insights of different tools available in Tableau and it&#39;s functions. Kudos Tableau!&lt;/p&gt;
 &lt;p&gt;On my journey of preparing for Tableau Desktop Certification.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/29june/tableau-data-scientist.png&#34; alt=&#34;tableau-data-scientist&#34;&gt;&lt;/p&gt;
